@@ -1,6 +1,4 @@
 ################### 开发环境配置
-server:
-  port: 12001
 ################### Undertow Configuration
 undertow:
   io-threads: 8

@@ -1,7 +1,12 @@
+server:
+  port: 12001
 spring:
   application:
     name: register-server
-################### 注册中
+  security:
+    user:
+      name: AKIAPYRXF3VSENILA42Q
+      password: e3iNcgZ+nuVjnfzHQq2HHxoZd3VySliXyG6vFruP
 eureka:
   server:
     enable-self-preservation: false
@@ -11,7 +16,7 @@ eureka:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
   client:
-    register-with-eureka: false
+    register-with-eureka: true
     fetch-registry: false
     serviceUrl:
-      defaultZone: http://localhost:12001/eureka/
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@127.0.0.1:${server.port}/eureka/
