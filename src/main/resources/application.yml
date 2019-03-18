@@ -1,4 +1,8 @@
-################### 开发环境配置
+################### 应用配置
+info:
+  version: 0.0.1
+  name: ${spring.application.name}
+  comment: "注册中心"
 ################### Undertow Configuration
 undertow:
   io-threads: 8
